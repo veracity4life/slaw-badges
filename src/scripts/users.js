@@ -18,6 +18,16 @@ class Users {
         house: 'hs',
         title: 'Cult Leader',
         immortal: true,
+      },
+      slaw_bot: {
+        house: 'hs',
+        title: 'Chub Master',
+        immortal: true,
+      },
+      nightbot: {
+        house: 'hs',
+        title: 'The Finger',
+        immortal: true,
       }
     };
     this.pendingRequests = {};
@@ -28,7 +38,6 @@ class Users {
       version: 'v1',
     };
 
-    localStorage.removeItem('slawCultists')
     if(this.storage = storageAvailable('localStorage')){
       this.users = {...JSON.parse(localStorage.getItem('slawCultists')), ...this.users};
     }
